@@ -1,3 +1,4 @@
-cmLongitud = input("Ingrese longitud: ")
-inLongitud = float(cmLongitud) * 2.54
-print(str(inLongitud)+ " cm = "+cmLongitud+" in")
+catetoA = input("Ingrese cateto a: ")
+catetoB = input("Ingrese cateto b: ")
+hipotenusa = (float(catetoA)**2 + float(catetoB)**2)**(1/2)
+print("La hipotenusa es "+str(hipotenusa))
