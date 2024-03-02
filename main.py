@@ -1,7 +1,3 @@
-import math
-primeraNota = input("Primera nota: ")
-segundaNota = input("Segundo nota: ")
-terceraNota = input("Tercera nota: ")
-cuartaNota = input("Cuarta nota: ")
-promedio= (float(primeraNota)+float(segundaNota)+float(terceraNota)+float(cuartaNota))/4
-print("El promedio es: "+ str(promedio))
+cmLongitud = input("Ingrese longitud: ")
+inLongitud = float(cmLongitud) * 2.54
+print(str(inLongitud)+ " cm = "+cmLongitud+" in")
