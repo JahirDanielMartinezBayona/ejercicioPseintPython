@@ -1,4 +1,6 @@
-catetoA = input("Ingrese cateto a: ")
-catetoB = input("Ingrese cateto b: ")
-hipotenusa = (float(catetoA)**2 + float(catetoB)**2)**(1/2)
-print("La hipotenusa es "+str(hipotenusa))
+print(" PROGRAMA PARA CONOCER SI EL NÚMERO ES PAR O IMPAR")
+numeroParImpar = int(input("Ingresa tu número: "))
+if numeroParImpar % 2 == 0:
+    print(" Su número es par ")
+else:
+    print(" Su número es impar ")
