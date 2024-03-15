@@ -1,10 +1,13 @@
 print("""
-PROGRAMA QUE ENTREGA LA PARTE DECIMAL DE UN NÚMERO REAL INGRESADO POR EL USUARIO
+PROGRAMA QUE PREGUNTE AL USUARIO LA HORA ACTUAL t 
+DEL RELOJ Y UN NÚMERO ENTERO DE HORAS h, 
+QUE INDIQUE QUÉ HORA MARCARÁ EL RELOJ DENTRO DE h HORAS
       """)
-numero = float(input("Ingresa tu número: "))
-if(numero > 0): 
-      numeroDecimal = float(numero - int(numero))      
-else: 
-      numeroDecimal = float(int(numero) - numero)
+horaActual = int(input("Hora actual: "))
+horaCantidad = int(input("Cantidad de horas: "))
+if (int(horaActual) + int(horaCantidad)) > 12:
+      resultado = (int(horaActual) + int(horaCantidad)) % 12
+else:
+      resultado = int(horaActual) + int(horaCantidad)
 
-print("La parte decimal es: "+str(numeroDecimal))
+print("En "+ str(horaCantidad) +" horas, el reloj marcara las "+str(resultado))
