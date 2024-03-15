@@ -1,10 +1,15 @@
 print("""
-PROGRAMA QUE INDIQUE SI UN AÑO ES BISIESTO O NO, 
-TENIENDO EN CUENTA CUÁL ERA EL CALENDARIO VIGENTE EN ESE AÑO
+PROGRAMA QUE PIDE DOS NÚMEROS ENTEROS Y QUE CALCULE LA DIVISIÓN,
+ INDICANDO SI LA DIVISIÓN ES EXACTA O NO
       """)
-anio = int(input("Ingrese un año: "))
-anioBisiesto = anio % 4
-if anioBisiesto == 0:
-      print(str(anio)+" es bisiesto")
+dividendo = int(input("Dividendo: "))
+divisor = int(input("Divisor: "))
+resultadoCociente = int(dividendo) / int(divisor)
+resultadoResto = dividendo % divisor
+print("")
+if resultadoResto == 0:
+      print("La división es exacta")
 else:
-      print(str(anio)+" no es bisiesto")
+      print("La división no es exacta")
+print("Cociente: " + str(int(resultadoCociente)))
+print("Resto: " + str(resultadoResto))
