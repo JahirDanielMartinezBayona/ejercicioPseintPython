@@ -1,15 +1,16 @@
+from time import localtime
 print("""
-PROGRAMA QUE PIDE DOS NÚMEROS ENTEROS Y QUE CALCULE LA DIVISIÓN,
- INDICANDO SI LA DIVISIÓN ES EXACTA O NO
+PROGRAMA QUE ENTREGA LA EDAD DEL USUARIO A PARTIR DE SU FECHA DE NACIMIENTO
       """)
-dividendo = int(input("Dividendo: "))
-divisor = int(input("Divisor: "))
-resultadoCociente = int(dividendo) / int(divisor)
-resultadoResto = dividendo % divisor
-print("")
-if resultadoResto == 0:
-      print("La división es exacta")
+print("Ingrese su fecha de nacimiento.")
+localTime = localtime()
+diaPersona = int(input("Dia: "))
+mesPersona = int(input("Mes: "))
+anioPersona = int(input("Año: "))
+
+anio= int(localTime.tm_year) - int(anioPersona)
+if mesPersona == localTime.tm_mon and diaPersona == localTime.tm_mday:
+    print("Usted tiene "+str(anio)+" años")
 else:
-      print("La división no es exacta")
-print("Cociente: " + str(int(resultadoCociente)))
-print("Resto: " + str(resultadoResto))
+    anio2 = int(anio)-int(1)
+    print("Usted tiene "+str(anio2)+" años")
