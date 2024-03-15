@@ -1,16 +1,26 @@
 from time import localtime
 print("""
-PROGRAMA QUE ENTREGA LA EDAD DEL USUARIO A PARTIR DE SU FECHA DE NACIMIENTO
-      """)
-print("Ingrese su fecha de nacimiento.")
-localTime = localtime()
-diaPersona = int(input("Dia: "))
-mesPersona = int(input("Mes: "))
-anioPersona = int(input("Año: "))
+PROGRAMA QUE SIMULA UNA CALCULADORA BÁSICA, 
+ESTE PUEDE REALIZAR OPERACIÓN DE SUMA, RESTA, 
+MULTIPLICACIÓN Y DIVISIÓN
+""")
 
-anio= int(localTime.tm_year) - int(anioPersona)
-if mesPersona == localTime.tm_mon and diaPersona == localTime.tm_mday:
-    print("Usted tiene "+str(anio)+" años")
-else:
-    anio2 = int(anio)-int(1)
-    print("Usted tiene "+str(anio2)+" años")
+operando1 = int(input("Operando: "))
+operador = str(input("Operador: "))
+operando2 = int(input("Operando: "))
+
+if operador == "+":
+    resultado = float(operando1) + float(operando2)
+    print(str(operando1)+"+"+str(operando2)+"="+str(resultado))
+elif operador == "-":
+    resultado = float(operando1) - float(operando2)
+    print(str(operando1)+"-"+str(operando2)+"="+str(resultado))
+elif operador == "*":
+    resultado = float(operando1) * float(operando2)
+    print(str(operando1)+"*"+str(operando2)+"="+str(resultado))
+elif operador == "/":
+    resultado = float(operando1) / float(operando2)
+    print(str(operando1)+"/"+str(operando2)+"="+str(resultado))
+elif operador == "**":
+    resultado = float(operando1) ** float(operando2)
+    print(str(operando1)+"**"+str(operando2)+"="+str(resultado))
