@@ -1,26 +1,21 @@
 from time import localtime
 print("""
-PROGRAMA QUE SIMULA UNA CALCULADORA BÁSICA, 
-ESTE PUEDE REALIZAR OPERACIÓN DE SUMA, RESTA, 
-MULTIPLICACIÓN Y DIVISIÓN
+PROGRAMA QUE RECIBE COMO ENTRADA LA ESTATURA, 
+EL PESO Y LA EDAD DE UNA PERSONA, 
+Y LE ENTREGA SU CONDICIÓN DE RIESGO
 """)
 
-operando1 = int(input("Operando: "))
-operador = str(input("Operador: "))
-operando2 = int(input("Operando: "))
+estatura = float(input("Estatura (metros): "))
+peso = float(input("Peso (kilogramo): "))
+edad = int(input("Edad: "))
 
-if operador == "+":
-    resultado = float(operando1) + float(operando2)
-    print(str(operando1)+"+"+str(operando2)+"="+str(resultado))
-elif operador == "-":
-    resultado = float(operando1) - float(operando2)
-    print(str(operando1)+"-"+str(operando2)+"="+str(resultado))
-elif operador == "*":
-    resultado = float(operando1) * float(operando2)
-    print(str(operando1)+"*"+str(operando2)+"="+str(resultado))
-elif operador == "/":
-    resultado = float(operando1) / float(operando2)
-    print(str(operando1)+"/"+str(operando2)+"="+str(resultado))
-elif operador == "**":
-    resultado = float(operando1) ** float(operando2)
-    print(str(operando1)+"**"+str(operando2)+"="+str(resultado))
+IMC = peso/((estatura)**2)
+
+if IMC < 22 and edad <45:
+    print(" RIESGO DE ENFERMEDADES CORONARIAS (Pronóstico): BAJO")
+elif IMC < 22 and edad >= 45:
+    print(" RIESGO DE ENFERMEDADES CORONARIAS (Pronóstico): MEDIO")
+elif IMC >= 22 and edad < 45:
+    print(" RIESGO DE ENFERMEDADES CORONARIAS (Pronóstico): MEDIO")    
+elif IMC >= 22 and edad >= 45:
+    print(" RIESGO DE ENFERMEDADES CORONARIAS (Pronóstico): ALTO")
