@@ -1,21 +1,21 @@
 from time import localtime
 print("""
-PROGRAMA QUE RECIBE COMO ENTRADA LA ESTATURA, 
-EL PESO Y LA EDAD DE UNA PERSONA, 
-Y LE ENTREGA SU CONDICIÓN DE RIESGO
+PROGRAMA QUE ENTREGA TODOS LOS DIVISORES 
+DEL NÚMERO ENTERO INGRESADO
 """)
 
-estatura = float(input("Estatura (metros): "))
-peso = float(input("Peso (kilogramo): "))
-edad = int(input("Edad: "))
+numero = int(input("Ingrese numero: "))
 
-IMC = peso/((estatura)**2)
+divisor = 1
+listaDivisores = []
+resultado = ""
+while divisor <= numero:
+    
+    resultado = numero % divisor
+    if resultado == 0:
+        listaDivisores.append(divisor)
+    divisor+=1
 
-if IMC < 22 and edad <45:
-    print(" RIESGO DE ENFERMEDADES CORONARIAS (Pronóstico): BAJO")
-elif IMC < 22 and edad >= 45:
-    print(" RIESGO DE ENFERMEDADES CORONARIAS (Pronóstico): MEDIO")
-elif IMC >= 22 and edad < 45:
-    print(" RIESGO DE ENFERMEDADES CORONARIAS (Pronóstico): MEDIO")    
-elif IMC >= 22 and edad >= 45:
-    print(" RIESGO DE ENFERMEDADES CORONARIAS (Pronóstico): ALTO")
+for variableDivisor in listaDivisores:
+    resultado = str(resultado) + " "+ str(variableDivisor)
+print(resultado)
