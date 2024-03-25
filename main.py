@@ -1,13 +1,28 @@
 from time import localtime
 print("""
-PROGRAMA QUE MUESTRA LA TABLA DE MULTIPLICAR DEL 
-1 AL 10 DEL NÚMERO INGRESADO POR EL USUARIO
+PROGRAMA QUE PERMITE TRABAJAR 
+CON LAS POTENCIAS FRACCIONALES DE DOS
 """)
+print("""
+CABE MENCIONAR QUE 
+EL NUMERADOR DEBE SER
+MENOR AL DENOMINADOR
+PARA QUE EL PROGRAMA FINALICE Y
+OPERE CORRECTAMENTE
+""")
+numerador = 0
+denominador = 0
 
-numero = int(input("Ingrese un numero: "))
+numerador = float(input("Ingrese un numerador: "))
+denominador = float(input("Ingrese un denominador: "))
 
-multiplicador = 1
-while(multiplicador <= 10):
-    resultado = numero * multiplicador 
-    print(f"{numero} * {multiplicador} = {resultado}")
-    multiplicador+=1
+potencia = 1
+resultado = 0
+suma = 0
+print("Potencia    Fracción    Suma")
+resultado = (float(numerador)**potencia)/(float(denominador)**potencia)
+while(resultado >= 0.000001):
+    suma = suma + resultado
+    print(f"{potencia}  {resultado}  {suma}")
+    resultado = (float(numerador)**potencia)/(float(denominador)**potencia)
+    potencia += 1
