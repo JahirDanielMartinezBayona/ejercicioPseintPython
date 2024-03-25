@@ -23,6 +23,6 @@ print("Potencia    Fracción    Suma")
 resultado = (float(numerador)**potencia)/(float(denominador)**potencia)
 while(resultado >= 0.000001):
     suma = suma + resultado
-    print(f"{potencia}  {resultado}  {suma}")
+    print(f"{potencia}           {resultado}         {suma}")
     resultado = (float(numerador)**potencia)/(float(denominador)**potencia)
     potencia += 1
