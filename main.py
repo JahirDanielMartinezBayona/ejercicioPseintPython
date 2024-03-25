@@ -1,21 +1,13 @@
 from time import localtime
 print("""
-PROGRAMA QUE ENTREGA TODOS LOS DIVISORES 
-DEL NÚMERO ENTERO INGRESADO
+PROGRAMA QUE MUESTRA LA TABLA DE MULTIPLICAR DEL 
+1 AL 10 DEL NÚMERO INGRESADO POR EL USUARIO
 """)
 
-numero = int(input("Ingrese numero: "))
+numero = int(input("Ingrese un numero: "))
 
-divisor = 1
-listaDivisores = []
-resultado = ""
-while divisor <= numero:
-    
-    resultado = numero % divisor
-    if resultado == 0:
-        listaDivisores.append(divisor)
-    divisor+=1
-
-for variableDivisor in listaDivisores:
-    resultado = str(resultado) + " "+ str(variableDivisor)
-print(resultado)
+multiplicador = 1
+while(multiplicador <= 10):
+    resultado = numero * multiplicador 
+    print(f"{numero} * {multiplicador} = {resultado}")
+    multiplicador+=1
