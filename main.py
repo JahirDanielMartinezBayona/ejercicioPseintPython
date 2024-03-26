@@ -1,21 +1,10 @@
-from time import localtime
 print("""
-PROGRAMA QUE PERMITE INGRESAR 
-LOS TIEMPOS DE VIAJE DE LOS TRAMOS 
-Y ENTREGUA COMO RESULTADO EL TIEMPO 
-TOTAL DE VIAJE EN FORMATO HORAS:MINUTOS.
-
+PROGRAMA QUE MUESTRE UNA TABLA DE MULTIPLICAR
 """)
 
-resultado = 0
-while True:
-    duracionTramo = input("Duración tramo: ")
-    resultado = int(resultado) + int(duracionTramo)
-    if int(duracionTramo) == 0:
-        global horas
-        global minutos
-        horas = int(resultado) / 60
-        minutos = resultado % 60
-        break
-
-print(f"Tiempo total de viaje: {int(horas)}:{minutos}")
+primerFactor = 1
+segundoFactor = 1
+while primerFactor <= 10:    
+    print(str(primerFactor*(segundoFactor+0))+" "+str(primerFactor*(segundoFactor+1))+" "+str(primerFactor*(segundoFactor+2))+" "+str(primerFactor*(segundoFactor+3))+" "+str(primerFactor*(segundoFactor+4))+" "+str(primerFactor*(segundoFactor+5))+" "+str(primerFactor*(segundoFactor+6))+" "+str(primerFactor*(segundoFactor+7))+" "+str(primerFactor*(segundoFactor+8))+" "+str(primerFactor*(segundoFactor+9)))
+    segundoFactor = 1
+    primerFactor += 1
