@@ -1,10 +1,30 @@
 print("""
-PROGRAMA QUE MUESTRE UNA TABLA DE MULTIPLICAR
+PROGRAMA QUE PIDE AL USUARIO DOS
+NÚMEROS ENTEROS, Y LUEGO ENTREGA 
+LA SUMA DE TODOS LOS NÚMEROS 
+QUE ESTÁN ENTRE ELLOS
 """)
 
-primerFactor = 1
-segundoFactor = 1
-while primerFactor <= 10:    
-    print(str(primerFactor*(segundoFactor+0))+" "+str(primerFactor*(segundoFactor+1))+" "+str(primerFactor*(segundoFactor+2))+" "+str(primerFactor*(segundoFactor+3))+" "+str(primerFactor*(segundoFactor+4))+" "+str(primerFactor*(segundoFactor+5))+" "+str(primerFactor*(segundoFactor+6))+" "+str(primerFactor*(segundoFactor+7))+" "+str(primerFactor*(segundoFactor+8))+" "+str(primerFactor*(segundoFactor+9)))
-    segundoFactor = 1
-    primerFactor += 1
+primerNumero = int(input("Ingrese num: "))
+segundoNumero = int(input("Ingrese num: "))
+
+
+global sumaTotal
+if(primerNumero > segundoNumero):
+    sumaTotal = 0
+    segundoNumero += 1
+    while segundoNumero < primerNumero:
+        sumaTotal = int(sumaTotal) + int(segundoNumero)
+        segundoNumero += 1
+
+elif(segundoNumero > primerNumero):
+    sumaTotal = 0
+    primerNumero += 1
+    while primerNumero < segundoNumero:
+        sumaTotal = int(sumaTotal) + int(primerNumero)
+        primerNumero += 1
+
+elif(segundoNumero == primerNumero):
+    sumaTotal = 0
+
+print("La suma es "+str(sumaTotal))
